@@ -39,4 +39,10 @@ public class TestConverter {
         String roman = Converter.arabicToRoman(arabic);
     }
     
+    @Test(expected = IllegalArgumentException.class)
+    public void arabicToRoman_whenArabicIsMoreThan3999_thenException() {
+        Integer arabic = 4000;
+
+        String roman = Converter.arabicToRoman(arabic);
+    }
 }
