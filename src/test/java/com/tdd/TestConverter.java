@@ -5,7 +5,6 @@ import org.mockito.Mock;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-
 public class TestConverter {
 
     @Test
@@ -24,6 +23,13 @@ public class TestConverter {
         String roman = Converter.arabicToRoman(arabic);
 
         assertEquals(roman, "IX");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void arabicToRoman_whenArabicZero_thenException() {
+        Integer arabic = 0;
+
+        String roman = Converter.arabicToRoman(arabic);
     }
 
 }
