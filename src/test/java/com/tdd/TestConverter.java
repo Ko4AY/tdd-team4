@@ -32,4 +32,11 @@ public class TestConverter {
         String roman = Converter.arabicToRoman(arabic);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void arabicToRoman_whenArabicIsNegative_thenException() {
+        Integer arabic = -1;
+
+        String roman = Converter.arabicToRoman(arabic);
+    }
+    
 }

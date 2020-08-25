@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tdd.TestConverter" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-08-25T14:46:23" hostname="LEXUS-PC" time="0.007">
+<testsuite name="com.tdd.TestConverter" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-08-25T14:47:39" hostname="LEXUS-PC" time="0.007">
   <properties/>
   <testcase name="arabicToRoman_whenArabicOneIsI_thenOk" classname="com.tdd.TestConverter" time="0.006"/>
   <testcase name="arabicToRoman_whenArabicNineIsIX_thenOk" classname="com.tdd.TestConverter" time="0.0"/>
+  <testcase name="arabicToRoman_whenArabicIsNegative_thenException" classname="com.tdd.TestConverter" time="0.0"/>
   <testcase name="arabicToRoman_whenArabicZero_thenException" classname="com.tdd.TestConverter" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
