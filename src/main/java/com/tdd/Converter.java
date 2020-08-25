@@ -8,6 +8,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Converter {
+    private static int MINIMUM_ROMAN = 1;
+    private static int MAXIMUM_ROMAN = 3999;
+
     enum RomanNumeral {
         I(1), IV(4), V(5), IX(9), X(10), 
         XL(40), L(50), XC(90), C(100), 
@@ -31,8 +34,8 @@ public class Converter {
     }
 
     public static String arabicToRoman(Integer arabic) { 
-        if (arabic < 1)  {
-            throw new IllegalArgumentException(arabic + " incorrect");
+        if ((arabic < MINIMUM_ROMAN) || (arabic > MAXIMUM_ROMAN))  {
+            throw new IllegalArgumentException(arabic + " is not in range [1,3999]");
         }
         
         List<RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
