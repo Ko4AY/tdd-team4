@@ -30,7 +30,11 @@ public class Converter {
         }
     }
 
-    public static String arabicToRoman(Integer arabic) {   
+    public static String arabicToRoman(Integer arabic) { 
+        if (arabic < 1)  {
+            throw new IllegalArgumentException(arabic + " incorrect");
+        }
+        
         List<RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
      
         int i = 0;
